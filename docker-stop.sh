@@ -1,0 +1,1 @@
+docker compose -f /Users/tanakatouma/vscode/kaggle-Learning-Equality/docker-compose.yml down -v
