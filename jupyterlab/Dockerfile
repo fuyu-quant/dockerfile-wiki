@@ -27,15 +27,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 &&  rm -rf /usr/local/src/*
 
 
-
-#RUN apt-get update && apt-get install -y \
-#    tzdata \
-#&&  ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime \
-#&&  apt-get clean \
-#&&  rm -rf /var/lib/apt/lists/*
-
-
-
 RUN curl -sL https://deb.nodesource.com/setup_18.x |bash - \
     && apt-get install -y --no-install-recommends \
         nodejs \
@@ -44,7 +35,8 @@ RUN curl -sL https://deb.nodesource.com/setup_18.x |bash - \
 &&  apt-get clean \
 # この下はどっちが必要か分からない
 &&  rm -rf /var/lib/apt/lists/* \  
-&&  rm -rf /usr/local/src/*
+&&  rm -rf /usr/local/src/*   
+
 
 
 # JupyterLab関連のパッケージ（いくつかの拡張機能を含む）
@@ -87,3 +79,7 @@ RUN mkdir -p ~/.ssh  && \
 COPY requirements.txt /root
 WORKDIR /root
 RUN pip install --no-cache-dir -r requirements.txt
+
+
+
+
