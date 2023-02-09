@@ -1,1 +1,1 @@
-docker compose -f /Users/tanakatouma/vscode/kaggle-Learning-Equality/docker-compose.yml up -d
+docker compose -f /Users/tanakatouma/vscode/ds_mlops/docker-compose.yml up -d

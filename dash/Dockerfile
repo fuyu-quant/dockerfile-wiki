@@ -8,6 +8,8 @@ RUN pip install --upgrade pip
 RUN pip install --upgrade setuptools
 
 # パッケージのインストール
+COPY requirements.txt /root
+WORKDIR /root
 RUN pip install --no-cache-dir -r requirements.txt
 
 # dashの不具合のため
@@ -18,5 +20,5 @@ ENV LANG ja_JP.UTF-8
 ENV LANGUAGE ja_JP:ja
 ENV LC_ALL ja_JP.UTF-8
 
-EXPOSE 5050
+#EXPOSE 5050
 CMD ["bash"]

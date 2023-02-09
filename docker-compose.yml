@@ -13,22 +13,22 @@ services:
       jupyter-lab
       --allow-root
       --ip=0.0.0.0
-      --port=8050
+      --port=8080
       --no-browser
       --NotebookApp.token=''
       --notebook-dir=/workspace
     expose:
       # コンテナ側のポート
       # https://tkzo.jp/blog/difference-between-ports-and-expose-in-docker-compose/
-      - "8050"
+      - "8080"
     ports:
       # アクセスIP(ここでは127.0.0.1なのでローカルループバックアドレス)からのみ8050ポートへの接続が許可され，コンテナ側の8050ポートへの接続が許可される
       # https://tkzo.jp/blog/difference-between-ports-and-expose-in-docker-compose/
-      - "127.0.0.1:8050:8050"  
+      - "127.0.0.1:8080:8080"  
     volumes:
-      - /Users/tanakatouma/Documents/jupyter-log/learning-equality/root_jupyter:/root/.jupyter
-      - /Users/tanakatouma/Documents/jupyter-log/learning-equality/workspace:/workspace
-      - /Users/tanakatouma/Documents/kaggle_data/learning-equality-curriculum-recommendations:/workspace/kaggle_data
+      - /Users/tanakatouma/Documents/Docker_volumes/ds_mlops/root_jupyter:/root/.jupyter
+      - /Users/tanakatouma/Documents/Docker_volumes/ds_mlops/workspace:/workspace
+     
 
 
     # GPUを使う場合の設定
@@ -51,7 +51,7 @@ services:
     restart: always
     tty: true  # dockerが勝手に終了しないようにするのに必要
     volumes:
-      - /Users/tanakatouma/vscode/kaggle-Learning-Equality/ml/:/root/ml
+      - /Users/tanakatouma/Documents/Docker_volumes/ds_mlops/ml/:/root/ml
 
 
 # mlflowの環境
@@ -74,7 +74,7 @@ services:
       - 15000:5000
     working_dir: '/root/'
     volumes:
-      - ./ml/outputs:/opt/outputs/mlruns
+      - /Users/tanakatouma/Documents/Docker_volumes/ds_mlops/mlflow:/opt/outputs/mlruns
 
 
 
@@ -88,15 +88,16 @@ services:
     restart: always
     tty: true
     expose:
-      - "5050"
+      - "8050"
     ports:
-      - "5050:5050"
+      - "127.0.0.1:8050:8050"
     working_dir: '/root/'
     volumes:
-      - /Users/tanakatouma/vscode/kaggle-Learning-Equality/dash/:/root/dash/
-      #- .:/root/src/
+      - /Users/tanakatouma/vscode/ds_mlops/dash:/root/dash/
+     # - /Users/tanakatouma/Documents/Docker_volumes/ds_mlops/dash:/root/dash/
+     # - .:/root/src/
       - ~/.zshrc:/root/.zshrc
 
-secrets:
-  user_ssh_key:
-    file: $SSH_KEY_PATH
+#secrets:
+#  user_ssh_key:
+#    file: $SSH_KEY_PATH

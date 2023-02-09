@@ -15,4 +15,6 @@ RUN pip install --upgrade pip
 RUN pip install --upgrade setuptools
 
 # パッケージのインストール
+COPY requirements.txt /root
+WORKDIR /root
 RUN pip install --no-cache-dir -r requirements.txt
