@@ -86,6 +86,8 @@ services:
       context: ./dash
       dockerfile: Dockerfile
     container_name: 'dash-app'
+    # M1 macの場合
+    platform: linux/x86_64
     restart: always
     tty: true
     expose:
@@ -115,6 +117,8 @@ services:
       context: ./operation
       dockerfile: Dockerfile
     container_name: 'operation'
+    # M1 macの場合
+    platform: linux/x86_64
     restart: always
     tty: true
     #working_dir: '/root/'
