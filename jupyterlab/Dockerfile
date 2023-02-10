@@ -1,8 +1,12 @@
 FROM python:3.9.13-buster
-#USER root
+USER root
 ARG DEBIAN_FRONTEND=noninteractive
 
-ENV TZ=Asia/Tokyo
+# 環境系
+ENV LANG ja_JP.UTF-8
+ENV LANGUAGE ja_JP:ja
+ENV LC_ALL ja_JP.UTF-8
+ENV TZ JST-9
 
 # パッケージの追加とタイムゾーンの設定
 # 必要に応じてインストールするパッケージを追加してください

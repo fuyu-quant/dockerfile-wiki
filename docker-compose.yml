@@ -1,4 +1,5 @@
 # python環境とjupyter環境を立ち上げる
+# versionを3.2にしているのはdoodを実行するのに対応しているversionを指定する必要があるため
 version: "3.9"
 
 services:
@@ -101,3 +102,18 @@ services:
 #secrets:
 #  user_ssh_key:
 #    file: $SSH_KEY_PATH
+
+
+# 全体制行の環境
+  operation:
+    build:
+      context: ./operation
+      dockerfile: Dockerfile
+    container_name: 'operation'
+    restart: always
+    tty: true
+    #working_dir: '/root/'
+    volumes:
+      # docker outside of docker を使うための設定
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /Users/tanakatouma/vscode/ds_mlops/:/root/ds_mlops/

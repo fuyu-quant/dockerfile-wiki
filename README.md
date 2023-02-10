@@ -13,7 +13,7 @@ docker compose exec python3 bash
 
 ## Dashの立ち上げ
 * コマンド
-docker-compose exec dash-app zsh -c "python dash/app.py"
+docker-compose exec dash-app zsh -c "python dash/app/app.py"
 * リンク　　
 http://127.0.0.1:8050/
 * 終了コマンド
@@ -24,6 +24,8 @@ https://qiita.com/NobuYoshi/items/9078d0689fef748486ac
 ## mlflowへアクセス
 http://localhost:15000/#/
 
-## Prefect
+## operation
+* doodにより他のdockerを制御するためのdocker環境
+* operationのdocker環境に入り，docker exec dash-app bash -c "python dash/app/app.py"を実行することでDashを立ち上げたりできる
 
 
