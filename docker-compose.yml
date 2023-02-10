@@ -8,7 +8,7 @@ services:
     build:
       context: ./jupyterlab
       dockerfile: Dockerfile
-    container_name: jupyterlab
+    container_name: ds_mlops_jupyterlab
     restart: always  # コンテナが停止した時に常に再起動する設定
     entrypoint: >
       jupyter-lab
@@ -121,4 +121,4 @@ services:
     volumes:
       # docker outside of docker を使うための設定
       - /var/run/docker.sock:/var/run/docker.sock
-      - /Users/tanakatouma/vscode/ds_mlops/:/root/ds_mlops/
+      - /Users/tanakatouma/vscode/ds_mlops/operation:/root/ds_mlops/

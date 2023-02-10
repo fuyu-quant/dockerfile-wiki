@@ -5,6 +5,8 @@
 #参考になりそう
 #https://github.com/flavienbwk/prefect-docker-compose/blob/main/client_docker/Dockerfile
 FROM teracy/ubuntu:16.04-dind-17.06.0-ce
+#FROM docker:20.10-dind-rootless
+#FROM docker:23.0.1-dind
 USER root
 
 # 環境系
@@ -13,6 +15,30 @@ ENV LANGUAGE ja_JP:ja
 ENV LC_ALL ja_JP.UTF-8
 ENV TZ JST-9
 
+
+# pythonのinstallに必要
+RUN apt-get update && \
+    apt-get install -y \
+    build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev wget
+RUN apt-get update && apt-get install -y --no-install-recommends wget build-essential libreadline-dev \ 
+libncursesw5-dev libssl-dev libsqlite3-dev libgdbm-dev libbz2-dev liblzma-dev zlib1g-dev uuid-dev libffi-dev libdb-dev
+
+#任意バージョンのpython install
+RUN wget --no-check-certificate https://www.python.org/ftp/python/3.9.5/Python-3.9.5.tgz \
+&& tar -xf Python-3.9.5.tgz \
+&& cd Python-3.9.5 \
+&& ./configure --enable-optimizations\
+&& make \
+&& make install
+#サイズ削減のため不要なものは削除
+RUN apt-get autoremove -y
+
+
+
+#USER root
+#RUN apk update && apk add build-base libffi-dev python3 python3-dev py3-pip gcc linux-headers musl-dev util-linux
+
+#RUN pip3 install --upgrade pip && pip3 install prefect==2.4.2 docker==6.0.0
 
 #RUN sudo apt-get update && \
 #    sudo apt-get install -y \
@@ -49,6 +75,6 @@ ENV TZ JST-9
 #RUN pip install --upgrade setuptools
 
 # パッケージのインストール
-#COPY requirements.txt /root
-#WORKDIR /root
-#RUN pip install --no-cache-dir -r requirements.txt
+COPY requirements.txt /root
+WORKDIR /root
+RUN pip3 install --no-cache-dir -r requirements.txt
