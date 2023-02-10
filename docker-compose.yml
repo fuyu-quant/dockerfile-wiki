@@ -98,10 +98,15 @@ services:
      # - /Users/tanakatouma/Documents/Docker_volumes/ds_mlops/dash:/root/dash/
      # - .:/root/src/
       - ~/.zshrc:/root/.zshrc
+      # docker outside of docker を使うための設定
+      - /var/run/docker.sock:/var/run/docker.sock
 
 #secrets:
 #  user_ssh_key:
 #    file: $SSH_KEY_PATH
+
+
+
 
 
 # 全体制行の環境

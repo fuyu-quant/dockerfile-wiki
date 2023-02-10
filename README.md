@@ -26,6 +26,16 @@ http://localhost:15000/#/
 
 ## operation
 * doodにより他のdockerを制御するためのdocker環境
-* operationのdocker環境に入り，docker exec dash-app bash -c "python dash/app/app.py"を実行することでDashを立ち上げたりできる
+* 以下のコマンドでoperationのdocker環境に入る  
+docker-compose exec operation bash
+* 以下のコマンドでDashを立ち上げたりできる   
+docker exec dash-app bash -c "python dash/app/app.py"
 
 
+## 全体の設計
+* Dashで入力を受け取る
+    誤った入力→無視
+    正しい入力→doodでoperationのdockerにアクセス
+    operationのpythonファイルを実行
+    operationからもdoodにより他のdocker環境にアクセス→値を取得
+    

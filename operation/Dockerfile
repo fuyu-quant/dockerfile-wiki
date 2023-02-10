@@ -1,6 +1,9 @@
 #https://github.com/teracyhq/docker-files/tree/master/ubuntu
 #doodをするための
 #https://blog.nijohando.jp/post/docker-in-docker-docker-outside-of-docker/
+
+#参考になりそう
+#https://github.com/flavienbwk/prefect-docker-compose/blob/main/client_docker/Dockerfile
 FROM teracy/ubuntu:16.04-dind-17.06.0-ce
 USER root
 
