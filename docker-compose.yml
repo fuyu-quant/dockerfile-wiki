@@ -125,4 +125,4 @@ services:
     volumes:
       # docker outside of docker を使うための設定
       - /var/run/docker.sock:/var/run/docker.sock
-      - /Users/tanakatouma/vscode/ds_mlops/operation:/root/ds_mlops/
+      - /Users/tanakatouma/vscode/ds_mlops/operation:/root/operation/

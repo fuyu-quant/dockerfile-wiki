@@ -13,7 +13,9 @@ USER root
 ENV LANG ja_JP.UTF-8
 ENV LANGUAGE ja_JP:ja
 ENV LC_ALL ja_JP.UTF-8
+ENV PYTHONIOENCODING=utf-8
 ENV TZ JST-9
+
 
 
 # pythonのinstallに必要
@@ -38,7 +40,7 @@ RUN apt-get autoremove -y
 #USER root
 #RUN apk update && apk add build-base libffi-dev python3 python3-dev py3-pip gcc linux-headers musl-dev util-linux
 
-#RUN pip3 install --upgrade pip && pip3 install prefect==2.4.2 docker==6.0.0
+RUN pip3 install --upgrade pip 
 
 #RUN sudo apt-get update && \
 #    sudo apt-get install -y \
