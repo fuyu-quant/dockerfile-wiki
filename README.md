@@ -76,7 +76,7 @@ docker compose exec python3 bash
 
 * Link　　
 http://localhost:8080/lab
-* Reference
+* Reference  
 
 
 ### [Dash](https://dash.plotly.com/)
@@ -89,15 +89,15 @@ docker-compose exec dash bash -c "python dash/src/app.py"
 When you want to exit, press [control + c]
 * Link　　
 http://127.0.0.1:8050/
-* Reference
+* Reference  
 https://qiita.com/NobuYoshi/items/9078d0689fef748486ac
 
 ### [Streamlit](https://docs.streamlit.io/)
 <img src="images/Streamlit.png" width="200">
 
 unimplemented
-* Link　
-* Reference 
+* Link  
+* Reference  
 
 
 ### [MLflow](https://mlflow.org/docs/latest/index.html)
@@ -105,7 +105,7 @@ unimplemented
 
 unimplemented 
 * Link　 
-* Reference 
+* Reference  
 http://localhost:15000/#/
 
 
@@ -123,12 +123,16 @@ unimplemented
 unimplemented
 * Reference
 
+
+
 ### [Prefect](https://docs.prefect.io/getting-started/overview/)
 <img src="images/prefect.png" width="200">
 
 unimplemented
 * Link　
 * Reference
+
+
 
 ### [FastAPI](https://fastapi.tiangolo.com/)
 <img src="images/FastAPI.png" width="200">
@@ -157,7 +161,7 @@ dockerfile templates, etc.
 How to make dockers work together
 
 ### Docker network
-* Reference
+* Reference  
     https://qiita.com/shundayo/items/8b24af5239d9162b253c
 
 ### Docker outside of docker (dood)
