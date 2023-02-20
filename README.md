@@ -21,21 +21,40 @@ Summary of docker environments for tools that data scientists might launch with 
 
 ## Basic docker operations
 ### Basic docker commands
-docker-compose exec Dockerのサービス名 bash
+```Dockerfile
+# Enter the container
+docker-compose exec Docker-service-name bash
+
+# Docker image list
+docker images
+
+# Remove docker image
+dokcer rmi Image-name
+
+# Check active containers
+docker ps -a
+
+# Docker network list
+docker network ls
+
+# Details of any docker network
+docker network inspect Network-name
+```
+
 
 ### How to run the Dockerfile
 How to start a dockerfile using Docker compose
-```shell-session
-# start container
+```bash
+# Start container
 bash docker.sh up
 
-# rebuild the docker image and start container
+# Rebuild the docker image and start container
 bash docker.sh force
 
-# stop container
+# Stop container
 bash docker.sh down
 
-# stop the container and delete the image
+# Stop the container and delete the image
 bash docker.sh rm 
 ```
 
@@ -44,34 +63,40 @@ bash docker.sh rm
 Explanation of the use and contents of various dockerfiles
 
 ### Python3
+```bash
 docker compose exec python3 bash
-
+```
 
 ### JupyterLab
+* Link　　
 http://localhost:8080/lab
 
 
 ### Dash
-* 実行コマンド
+Execution command
+```bash
 docker-compose exec dash bash -c "python dash/src/app.py"
-* リンク　　
+```
+When you want to exit, press [control + c]
+* Link　　
 http://127.0.0.1:8050/
-* 終了コマンド
-control + c
-* 参考リンク
+* Reference
 https://qiita.com/NobuYoshi/items/9078d0689fef748486ac
 
 ### streamlit
 unimplemented
+* Link
 
 
 ### MLflow
 unimplemented  
+* Link
 http://localhost:15000/#/
 
 
 ### Aimflow
-unimplemented  
+unimplemented
+* Link
 * 参考サイト
 https://github.com/aimhubio/aimlflow
 
