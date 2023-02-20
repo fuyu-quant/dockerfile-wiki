@@ -1,18 +1,45 @@
 # DataScientist_MLOps
-データサイエンティスト向けのMLOps的な何か
+Summary of docker environments for tools that data scientists might launch with docker   
 
-## Docker
-* Docker環境の入り方
+## Contents
+* [Basic docker operations](#basic-docker-operations)
+    * [Basic docker commands](#basic-docker-commands)
+    * [How to run the Dockerfile](#how-to-run-the-dockerfile)
+* [Dockerfiles](#dockerfiles)
+    * [Python3](#python3)
+    * [Jupyterlab](#jupyterlab)
+    * [Dash](#dash)
+    * [Streamlit](#streamlit)
+    * [MLflow](#mlflow)
+    * [Aimflow](#aimflow)
+    * [dbt](#dbt)
+    * [Prefect](#prefect)
+    * [FastAPI](#fastapi)
+* [Inter-Container Cooperation](#others)
+
+
+
+## Basic docker operations
+### Basic docker commands
 docker-compose exec Dockerのサービス名 bash
 
-## JupyterLab
-http://localhost:8080/lab
+### How to run the Dockerfile
+docker-compose.yml
 
-## Python3の環境
+
+## Dockerfiles
+Explanation of the use and contents of various dockerfiles
+
+### Python3
 docker compose exec python3 bash
 
-## Dashの立ち上げ
-* コマンド
+
+### JupyterLab
+http://localhost:8080/lab
+
+
+### Dash
+* 実行コマンド
 docker-compose exec dash-app zsh -c "python dash/app/app.py"
 * リンク　　
 http://127.0.0.1:8050/
@@ -21,23 +48,49 @@ control + c
 * 参考リンク
 https://qiita.com/NobuYoshi/items/9078d0689fef748486ac
 
-## mlflowへアクセス
+### streamlit
+unimplemented
+
+
+## MLflow
+unimplemented  
 http://localhost:15000/#/
 
-## operation
-* doodにより他のdockerを制御するためのdocker環境
-* 以下のコマンドでoperationのdocker環境に入る  
-docker-compose exec operation bash
-* 以下のコマンドでDashを立ち上げたりできる   
-docker exec dash-app bash -c "python dash/app/app.py"
-* prefect
-https://github.com/rpeden/prefect-docker-compose
+
+### Aimflow
+unimplemented  
+* 参考サイト
+https://github.com/aimhubio/aimlflow
+
+### dbt
+unimplemented
 
 
-## 全体の設計
-* Dashで入力を受け取る
-    誤った入力→無視
-    正しい入力→doodでoperationのdockerにアクセス
-    operationのpythonファイルを実行
-    operationからもdoodにより他のdocker環境にアクセス→値を取得
-    
+### Prefect
+unimplemented
+
+
+### FastAPI
+unimplemented  
+* 参考サイト
+https://buildersbox.corp-sansan.com/entry/tech18_container
+* APIの実行
+docker build -t tech_blog_18 ./  
+docker run -it --rm -p 8000:8000 tech_blog_18  
+ローカルから  
+curl -XGET "http://localhost:8000"
+
+
+
+### utils
+dockerfile templates, etc.
+
+
+
+
+## Inter-Container Cooperation
+
+
+### Docker network
+* 参考サイト
+https://qiita.com/shundayo/items/8b24af5239d9162b253c

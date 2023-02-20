@@ -1,34 +1,34 @@
-# python環境とjupyter環境を立ち上げる
-# versionを3.2にしているのはdoodを実行するのに対応しているversionを指定する必要があるため
 version: "3.9"
+
+
 
 services:
 # jupyter環境
-  jupyterlab:
-    build:
-      context: ./jupyterlab
-      dockerfile: Dockerfile
-    container_name: ds_mlops_jupyterlab
-    restart: always  # コンテナが停止した時に常に再起動する設定
-    entrypoint: >
-      jupyter-lab
-      --allow-root
-      --ip=0.0.0.0
-      --port=8080
-      --no-browser
-      --NotebookApp.token=''
-      --notebook-dir=/workspace
-    expose:
+#  jupyterlab:
+#    build:
+#      context: ./jupyterlab
+#      dockerfile: Dockerfile
+#    container_name: ds_mlops_jupyterlab
+#    restart: always  # コンテナが停止した時に常に再起動する設定
+#    entrypoint: >
+#      jupyter-lab
+#      --allow-root
+#      --ip=0.0.0.0
+#      --port=8080
+#      --no-browser
+#      --NotebookApp.token=''
+#      --notebook-dir=/workspace
+#    expose:
       # コンテナ側のポート
       # https://tkzo.jp/blog/difference-between-ports-and-expose-in-docker-compose/
-      - "8080"
-    ports:
+#      - "8080"
+#    ports:
       # アクセスIP(ここでは127.0.0.1なのでローカルループバックアドレス)からのみ8050ポートへの接続が許可され，コンテナ側の8050ポートへの接続が許可される
       # https://tkzo.jp/blog/difference-between-ports-and-expose-in-docker-compose/
-      - "127.0.0.1:8080:8080"  
-    volumes:
-      - /Users/tanakatouma/Documents/Docker_volumes/ds_mlops/root_jupyter:/root/.jupyter
-      - /Users/tanakatouma/Documents/Docker_volumes/ds_mlops/workspace:/workspace
+#      - "127.0.0.1:8080:8080"  
+#    volumes:
+#      - /Users/tanakatouma/Documents/Docker_volumes/ds_mlops/root_jupyter:/root/.jupyter
+#      - /Users/tanakatouma/Documents/Docker_volumes/ds_mlops/workspace:/workspace
      
 
 
@@ -43,6 +43,7 @@ services:
     #         - capabilities:
     #           - gpu
     
+
 # python3の環境
   python3:
     build:
@@ -51,41 +52,46 @@ services:
     container_name: 'python3'
     restart: always
     tty: true  # dockerが勝手に終了しないようにするのに必要
+    expose:
+      - "8070"
+    ports:
+      - "8070:8070"
     volumes:
       - /Users/tanakatouma/Documents/Docker_volumes/ds_mlops/ml/:/root/ml
+      #- /Users/tanakatouma/vscode/ds_mlops/ml:/root/ml/
 
 
 # mlflowの環境
-  mlflow:
-    build:
-      context: ./mlflow
-      dockerfile: Dockerfile
-    container_name: 'mlflow'
-    restart: always
-    command:
-      - "mlflow"
-      - "server"
-      - "--backend-store-uri"
-      - "/opt/outputs/mlruns"
-      - "--default-artifact-root"
-      - "/opt/outputs/mlruns"
-      - "--host"
-      - "0.0.0.0"
-    ports:
-      - 15000:5000
-    working_dir: '/root/'
-    volumes:
-      - /Users/tanakatouma/Documents/Docker_volumes/ds_mlops/mlflow:/opt/outputs/mlruns
+#  mlflow:
+#    build:
+#      context: ./mlflow
+#      dockerfile: Dockerfile
+#    container_name: 'mlflow'
+#    restart: always
+#    command:
+#      - "mlflow"
+#      - "server"
+#      - "--backend-store-uri"
+#      - "/opt/outputs/mlruns"
+#      - "--default-artifact-root"
+#      - "/opt/outputs/mlruns"
+#      - "--host"
+#      - "0.0.0.0"
+#    ports:
+#      - 15000:5000
+#    working_dir: '/root/'
+#    volumes:
+#      - /Users/tanakatouma/Documents/Docker_volumes/ds_mlops/mlflow:/opt/outputs/mlruns
 
 
 
 
 # Dashの環境
-  dash-app:
+  dash:
     build:
       context: ./dash
       dockerfile: Dockerfile
-    container_name: 'dash-app'
+    container_name: 'dash'
     # M1 macの場合
     platform: linux/x86_64
     restart: always
@@ -93,19 +99,15 @@ services:
     expose:
       - "8050"
     ports:
-      - "127.0.0.1:8050:8050"
+      - "8050:8050"
+      # ほぼ同じ
+      #- "127.0.0.1:8050:8050"
     working_dir: '/root/'
     volumes:
       - /Users/tanakatouma/vscode/ds_mlops/dash:/root/dash/
-     # - /Users/tanakatouma/Documents/Docker_volumes/ds_mlops/dash:/root/dash/
-     # - .:/root/src/
-      - ~/.zshrc:/root/.zshrc
-      # docker outside of docker を使うための設定
-      - /var/run/docker.sock:/var/run/docker.sock
-
-#secrets:
-#  user_ssh_key:
-#    file: $SSH_KEY_PATH
+     # - /Users/tanakatouma/vscode/ds_mlops/ml:/root/ml/
+      - /Users/tanakatouma/Documents/Docker_volumes/ds_mlops/dash:/root/dash/
+     
 
 
 
@@ -126,3 +128,7 @@ services:
       # docker outside of docker を使うための設定
       - /var/run/docker.sock:/var/run/docker.sock
       - /Users/tanakatouma/vscode/ds_mlops/operation:/root/operation/
+
+#secrets:
+#  user_ssh_key:
+#    file: $SSH_KEY_PATH
