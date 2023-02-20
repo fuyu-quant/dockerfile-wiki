@@ -63,6 +63,7 @@ bash docker.sh rm
 Explanation of the use and contents of various dockerfiles
 
 ### Python3
+<img src="images/python3.png" width="200">
 ```bash
 docker compose exec python3 bash
 ```
