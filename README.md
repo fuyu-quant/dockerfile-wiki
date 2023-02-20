@@ -73,7 +73,7 @@ http://localhost:8080/lab
 
 
 ### Dash
-![logo](images/Dash.png)  
+<img src="images/Dash.png" width="300">
 Execution command
 ```bash
 docker-compose exec dash bash -c "python dash/src/app.py"
