@@ -45,19 +45,19 @@ services:
     
 
 # python3の環境
-  python3:
-    build:
-      context: ./ml
-      dockerfile: Dockerfile
-    container_name: 'python3'
-    restart: always
-    tty: true  # dockerが勝手に終了しないようにするのに必要
-    expose:
-      - "8070"
-    ports:
-      - "8070:8070"
-    volumes:
-      - /Users/tanakatouma/Documents/Docker_volumes/ds_mlops/ml/:/root/ml
+#  python3:
+#    build:
+#      context: ./python3
+#      dockerfile: Dockerfile
+#    container_name: 'python3'
+#    restart: always
+#    tty: true  # dockerが勝手に終了しないようにするのに必要
+#    expose:
+#      - "8070"
+#    ports:
+#      - "8070:8070"
+#    volumes:
+#      - /Users/tanakatouma/Documents/Docker_volumes/ds_mlops/python3/:/root/ml
       #- /Users/tanakatouma/vscode/ds_mlops/ml:/root/ml/
 
 
@@ -113,21 +113,17 @@ services:
 
 
 
-# 全体制行の環境
-  operation:
-    build:
-      context: ./operation
-      dockerfile: Dockerfile
-    container_name: 'operation'
-    # M1 macの場合
-    platform: linux/x86_64
-    restart: always
-    tty: true
-    #working_dir: '/root/'
-    volumes:
-      # docker outside of docker を使うための設定
-      - /var/run/docker.sock:/var/run/docker.sock
-      - /Users/tanakatouma/vscode/ds_mlops/operation:/root/operation/
+# FastAPI
+#  fastapi:
+#    build:
+#      context: ./fastapi
+#      dockerfile: Dockerfile
+#    container_name: 'fastapi'
+#    restart: always
+#    tty: true
+#    working_dir: '/root/'
+#    volumes:
+#      - /Users/tanakatouma/vscode/ds_mlops/operation:/root/operation/
 
 #secrets:
 #  user_ssh_key:
