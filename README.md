@@ -16,6 +16,8 @@ Summary of docker environments for tools that data scientists might launch with 
     * [Prefect](#prefect)
     * [FastAPI](#fastapi)
 * [Inter-Container Cooperation](#others)
+    * [Docker network](#docker-network)
+    * [Docker outside of docker](#docker-outside-of-docker-dood)
 
 
 
@@ -139,9 +141,8 @@ docker run -it --rm -p 8000:8000 tech_blog_18
 curl -XGET "http://localhost:8000"
 ```
 * Link　
-* Reference
+* Reference  
 https://buildersbox.corp-sansan.com/entry/tech18_container
-
 
 
 
@@ -151,9 +152,16 @@ dockerfile templates, etc.
 
 
 
-## Inter-Container Cooperation
 
+## Inter-Container Cooperation
+How to make dockers work together
 
 ### Docker network
 * Reference
 https://qiita.com/shundayo/items/8b24af5239d9162b253c
+
+### Docker outside of docker (dood)
+* Reference
+https://hub.docker.com/layers/library/docker/20.10.7-dind/images/sha256-778521a7c301de26994f7aca616ab10c1bc35b8f66b802345d0cad89af381dcb  
+https://qiita.com/t_katsumura/items/d5be6afadd6ec6545a9d  
+https://qiita.com/tkosht/items/7a0721fa9cc69eabf531  
