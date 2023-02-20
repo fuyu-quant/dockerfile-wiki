@@ -30,18 +30,6 @@ services:
 #      - /Users/tanakatouma/Documents/Docker_volumes/ds_mlops/root_jupyter:/root/.jupyter
 #      - /Users/tanakatouma/Documents/Docker_volumes/ds_mlops/workspace:/workspace
      
-
-
-    # GPUを使う場合の設定
-    # environment:
-    #   - "NVIDIA_VISIBLE_DEVICES=all"
-    #   - "NVIDIA_DRIVER_CAPABILITIES=all"
-    # deploy:
-    #   resources:
-    #     reservations:
-    #       devices:
-    #         - capabilities:
-    #           - gpu
     
 
 # python3の環境

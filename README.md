@@ -24,7 +24,17 @@ Summary of docker environments for tools that data scientists might launch with 
 docker-compose exec Dockerのサービス名 bash
 
 ### How to run the Dockerfile
-docker-compose.yml
+How to start a dockerfile using Docker compose
+```shell-session
+# start container
+bash docker.sh up
+# rebuild the docker image and start container
+bash docker.sh force
+# stop container
+bash docker.sh down
+# stop the container and delete the image
+bash docker.sh rm 
+```
 
 
 ## Dockerfiles
@@ -40,7 +50,7 @@ http://localhost:8080/lab
 
 ### Dash
 * 実行コマンド
-docker-compose exec dash-app zsh -c "python dash/app/app.py"
+docker-compose exec dash bash -c "python dash/src/app.py"
 * リンク　　
 http://127.0.0.1:8050/
 * 終了コマンド
