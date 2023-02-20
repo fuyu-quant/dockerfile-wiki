@@ -68,12 +68,13 @@ docker compose exec python3 bash
 ```
 
 ### JupyterLab
+<img src="images/Jupyterlab.png" width="200">
 * Link　　
 http://localhost:8080/lab
 
 
-### Dash
-<img src="images/Dash.png" width="300">
+### [Dash](https://dash.plotly.com/)
+<img src="images/Dash.png" width="200">
 Execution command
 ```bash
 docker-compose exec dash bash -c "python dash/src/app.py"
