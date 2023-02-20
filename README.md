@@ -64,19 +64,23 @@ Explanation of the use and contents of various dockerfiles
 
 ### Python3
 <img src="images/python3.png" width="200">
+
 ```bash
 docker compose exec python3 bash
 ```
 
 ### [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/)
 <img src="images/Jupyterlab.png" width="200">
+
 * Link　　
 http://localhost:8080/lab
+* Reference
 
 
 ### [Dash](https://dash.plotly.com/)
 <img src="images/Dash.png" width="200">
 Execution command
+
 ```bash
 docker-compose exec dash bash -c "python dash/src/app.py"
 ```
@@ -88,35 +92,45 @@ https://qiita.com/NobuYoshi/items/9078d0689fef748486ac
 
 ### [Streamlit](https://docs.streamlit.io/)
 <img src="images/Streamlit.png" width="200">
+
 unimplemented
-* Link  
+* Link　
+* Reference 
 
 
 ### [MLflow](https://mlflow.org/docs/latest/index.html)
 <img src="images/MLflow.png" width="200">
-unimplemented  
-* Link  
+
+unimplemented 
+* Link　 
+* Reference 
 http://localhost:15000/#/
 
 
 ### [Aimflow](https://github.com/aimhubio/aimlflow)
 <img src="images/Aimflow.png" width="200">
+
 unimplemented
-* Link  
+* Link　
+* Reference 
 
 
 ### [dbt](https://docs.getdbt.com/docs/collaborate/documentation)
 <img src="images/dbt.png" width="200">
-unimplemented
 
+unimplemented
+* Reference
 
 ### [Prefect](https://docs.prefect.io/getting-started/overview/)
 <img src="images/prefect.png" width="200">
-unimplemented
 
+unimplemented
+* Link　
+* Reference
 
 ### [FastAPI](https://fastapi.tiangolo.com/)
 <img src="images/FastAPI.png" width="200">
+
 Execution command
 ```bash
 ocker build -t tech_blog_18 ./  
@@ -124,6 +138,7 @@ docker run -it --rm -p 8000:8000 tech_blog_18
 ローカルから  
 curl -XGET "http://localhost:8000"
 ```
+* Link　
 * Reference
 https://buildersbox.corp-sansan.com/entry/tech18_container
 
