@@ -85,18 +85,18 @@ https://qiita.com/NobuYoshi/items/9078d0689fef748486ac
 
 ### streamlit
 unimplemented
-* Link
+* Link  
 
 
 ### MLflow
 unimplemented  
-* Link
+* Link  
 http://localhost:15000/#/
 
 
 ### Aimflow
 unimplemented
-* Link
+* Link  
 * 参考サイト
 https://github.com/aimhubio/aimlflow
 
@@ -109,14 +109,16 @@ unimplemented
 
 
 ### FastAPI
-unimplemented  
-* 参考サイト
-https://buildersbox.corp-sansan.com/entry/tech18_container
-* APIの実行
-docker build -t tech_blog_18 ./  
+Execution command
+```bash
+ocker build -t tech_blog_18 ./  
 docker run -it --rm -p 8000:8000 tech_blog_18  
 ローカルから  
 curl -XGET "http://localhost:8000"
+```
+* Reference
+https://buildersbox.corp-sansan.com/entry/tech18_container
+
 
 
 
@@ -130,5 +132,5 @@ dockerfile templates, etc.
 
 
 ### Docker network
-* 参考サイト
+* Reference
 https://qiita.com/shundayo/items/8b24af5239d9162b253c
