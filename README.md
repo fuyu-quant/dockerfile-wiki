@@ -73,6 +73,7 @@ http://localhost:8080/lab
 
 
 ### Dash
+![logo](images/Dash.png)  
 Execution command
 ```bash
 docker-compose exec dash bash -c "python dash/src/app.py"
@@ -83,7 +84,7 @@ http://127.0.0.1:8050/
 * Reference
 https://qiita.com/NobuYoshi/items/9078d0689fef748486ac
 
-### streamlit
+### Streamlit
 unimplemented
 * Link  
 
