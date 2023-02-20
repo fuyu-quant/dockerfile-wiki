@@ -28,10 +28,13 @@ How to start a dockerfile using Docker compose
 ```shell-session
 # start container
 bash docker.sh up
+
 # rebuild the docker image and start container
 bash docker.sh force
+
 # stop container
 bash docker.sh down
+
 # stop the container and delete the image
 bash docker.sh rm 
 ```
