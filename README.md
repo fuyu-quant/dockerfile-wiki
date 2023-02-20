@@ -87,7 +87,7 @@ Execution command
 docker-compose exec dash bash -c "python dash/src/app.py"
 ```
 When you want to exit, press [control + c]
-* Link　　
+* Link  
 http://127.0.0.1:8050/
 * Reference  
 https://qiita.com/NobuYoshi/items/9078d0689fef748486ac
@@ -105,8 +105,9 @@ unimplemented
 
 unimplemented 
 * Link　 
-* Reference  
 http://localhost:15000/#/
+* Reference  
+
 
 
 ### [Aimflow](https://github.com/aimhubio/aimlflow)
