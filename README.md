@@ -1,4 +1,4 @@
-# DataScientist_MLOps
+# Dockerfile for data scientists
 Summary of docker environments for tools that data scientists might launch with docker   
 
 ## Contents
