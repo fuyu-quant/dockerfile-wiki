@@ -145,10 +145,12 @@ cd src
 uvicorn main:app --host 0.0.0.0 --reload
 ```
 * Link  
-http://0.0.0.0:8000/
+    * http://0.0.0.0:8000/
+    * http://127.0.0.1:8000/docs
+    * http://127.0.0.1:8000/redoc
 * Reference  
-https://buildersbox.corp-sansan.com/entry/tech18_container  
-https://qiita.com/Brutus/items/3133766e14f11d269933
+    * https://buildersbox.corp-sansan.com/entry/tech18_container  
+    * https://qiita.com/Brutus/items/3133766e14f11d269933
 
 
 
@@ -163,11 +165,11 @@ How to make dockers work together
 
 ### Docker network
 * Reference  
-    https://qiita.com/shundayo/items/8b24af5239d9162b253c  
-    https://qiita.com/dhiki1234/items/9a673107eb9310d6aafa
+    * https://qiita.com/shundayo/items/8b24af5239d9162b253c  
+    * https://qiita.com/dhiki1234/items/9a673107eb9310d6aafa
 
 ### Docker outside of docker (dood)
 * Reference  
-    https://hub.docker.com/layers/library/docker/20.10.7-dind/images/sha256-778521a7c301de26994f7aca616ab10c1bc35b8f66b802345d0cad89af381dcb  
-    https://qiita.com/t_katsumura/items/d5be6afadd6ec6545a9d  
-    https://qiita.com/tkosht/items/7a0721fa9cc69eabf531  
+    * https://hub.docker.com/layers/library/docker/20.10.7-dind/images/sha256-778521a7c301de26994f7aca616ab10c1bc35b8f66b802345d0cad89af381dcb  
+    * https://qiita.com/t_katsumura/items/d5be6afadd6ec6545a9d  
+    * https://qiita.com/tkosht/items/7a0721fa9cc69eabf531  
