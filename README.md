@@ -41,6 +41,13 @@ docker network ls
 
 # Details of any docker network
 docker network inspect Network-name
+
+# Container to container http communication
+# container name : Container name for communication destination
+# port : Open ports of the container to which you are communicating
+curl http://[container name]:[port]/
+# example
+curl http://fastapi:8040/
 ```
 
 
