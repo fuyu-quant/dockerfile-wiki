@@ -149,7 +149,7 @@ Execution command
 ```bash
 docker-compose exec fastapi bash
 cd src
-uvicorn main:app --host 0.0.0.0 --reload
+uvicorn main:app --reload  --host 0.0.0.0 --port 8040
 ```
 * Link  
     * http://0.0.0.0:8040/
