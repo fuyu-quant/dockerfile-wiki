@@ -140,12 +140,12 @@ unimplemented
 
 Execution command
 ```bash
-ocker build -t tech_blog_18 ./  
-docker run -it --rm -p 8000:8000 tech_blog_18  
-ローカルから  
-curl -XGET "http://localhost:8000"
+docker-compose exec fastapi bash
+cd src
+uvicorn main:app --host 0.0.0.0 --reload
 ```
-* Link　
+* Link  
+http://0.0.0.0:8000/
 * Reference  
 https://buildersbox.corp-sansan.com/entry/tech18_container  
 https://qiita.com/Brutus/items/3133766e14f11d269933
@@ -154,7 +154,6 @@ https://qiita.com/Brutus/items/3133766e14f11d269933
 
 ### utils
 dockerfile templates, etc.
-
 
 
 
