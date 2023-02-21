@@ -75,24 +75,24 @@ services:
 
 
 # Dashの環境
-#  dash:
-#    build:
-#      context: ./dash
-#      dockerfile: Dockerfile
-#    container_name: 'dash'
+  dash:
+    build:
+      context: ./dash
+      dockerfile: Dockerfile
+    container_name: 'dash'
     # M1 macの場合
-#    platform: linux/x86_64
-#    restart: always
-#    tty: true
-#    expose:
-#      - "8050"
-#    ports:
-#      - "8050:8050"
+    platform: linux/x86_64
+    restart: always
+    tty: true
+    expose:
+      - "8050"
+    ports:
+      - "8050:8050"
       # ほぼ同じ
       #- "127.0.0.1:8050:8050"
-#    working_dir: '/root/'
-#    volumes:
-#      - /Users/tanakatouma/vscode/ds_mlops/dash:/root/dash/
+    working_dir: '/root/'
+    volumes:
+      - /Users/tanakatouma/vscode/ds_mlops/dash/src/:/root/src/
 #      - /Users/tanakatouma/Documents/Docker_volumes/ds_mlops/dash:/root/dash/
      
 
@@ -108,10 +108,10 @@ services:
     container_name: 'fastapi'
     restart: always
     tty: true
-    expose:
-      - "8000"
+    #expose:
+    #  - "8000"
     ports:
-      - "8000:8000"
+      - "8040:8040"
     working_dir: '/root/'
     volumes:
       - /Users/tanakatouma/vscode/ds_mlops/fastapi/src/:/root/src/

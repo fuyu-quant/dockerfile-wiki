@@ -17,5 +17,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # 最初に起動する際に必要
 # 現状実行できていない
-WORKDIR /root/src
-ENTRYPOINT ["uvicorn", "main:app", "--host", "0.0.0.0", "--reload"]
+COPY /src/main.py /root
+ENTRYPOINT ["uvicorn", "main:app", "--reload", "--host", "0.0.0.0", "--port", "8040"]

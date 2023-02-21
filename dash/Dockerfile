@@ -20,7 +20,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 #RUN pip install werkzeug==2.0.0
 
 
-
-
 #EXPOSE 5050
 CMD ["bash"]

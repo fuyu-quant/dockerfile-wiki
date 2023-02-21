@@ -75,7 +75,7 @@ docker compose exec python3 bash
 <img src="images/Jupyterlab.png" width="200">
 
 * Link　　
-http://localhost:8080/lab
+    * http://localhost:8080/lab
 * Reference  
 
 
@@ -88,9 +88,9 @@ docker-compose exec dash bash -c "python dash/src/app.py"
 ```
 When you want to exit, press [control + c]
 * Link  
-http://127.0.0.1:8050/
+    * http://127.0.0.1:8050/
 * Reference  
-https://qiita.com/NobuYoshi/items/9078d0689fef748486ac
+    * https://qiita.com/NobuYoshi/items/9078d0689fef748486ac
 
 ### [Streamlit](https://docs.streamlit.io/)
 <img src="images/Streamlit.png" width="200">
@@ -105,7 +105,7 @@ unimplemented
 
 unimplemented 
 * Link　 
-http://localhost:15000/#/
+    * http://localhost:15000/#/
 * Reference  
 a
 
@@ -145,9 +145,9 @@ cd src
 uvicorn main:app --host 0.0.0.0 --reload
 ```
 * Link  
-    * http://0.0.0.0:8000/
-    * http://127.0.0.1:8000/docs
-    * http://127.0.0.1:8000/redoc
+    * http://0.0.0.0:8040/
+    * http://127.0.0.1:8040/docs
+    * http://127.0.0.1:8040/redoc
 * Reference  
     * https://buildersbox.corp-sansan.com/entry/tech18_container  
     * https://qiita.com/Brutus/items/3133766e14f11d269933
