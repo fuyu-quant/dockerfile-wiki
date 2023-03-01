@@ -24,6 +24,8 @@ Summary of docker environments for tools that data scientists might launch with 
 
 
 
+
+
 ## Python runtime environment
 
 ### Python3
@@ -31,6 +33,8 @@ Summary of docker environments for tools that data scientists might launch with 
 
 ### [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/)
 https://github.com/fuyu-quant/jupyterlab-docker
+
+
 
 
 
@@ -53,15 +57,11 @@ https://github.com/fuyu-quant/streamlit-docker
 ## Machine Learning Development
 
 ### [MLflow](https://mlflow.org/docs/latest/index.html)
-<img src="images/MLflow.png" width="200">
-
-unimplemented 
-* Link　 
-    * http://localhost:15000/#/
-
+https://github.com/fuyu-quant/mlflow-docker
 
 ### [Aimflow](https://github.com/aimhubio/aimlflow)
-<img src="images/Aimflow.png" width="200">
+https://github.com/fuyu-quant/aimflow-docker
+
 
 ### [Weight&Biases](https://github.com/wandb/server)
 
@@ -71,13 +71,8 @@ unimplemented
 
 ## Pipeline Tools
 
-
 ### [Prefect](https://docs.prefect.io/getting-started/overview/)
-<img src="images/prefect.png" width="200">
-
-unimplemented
-* Link　
-* Reference
+https://github.com/fuyu-quant/prefect-docker
 
 
 
@@ -86,21 +81,8 @@ unimplemented
 ## WebAPI
 
 ### [FastAPI](https://fastapi.tiangolo.com/)
-<img src="images/FastAPI.png" width="200">
+https://github.com/fuyu-quant/fastapi-docker
 
-Execution command
-```bash
-docker-compose exec fastapi bash
-cd src
-uvicorn main:app --reload  --host 0.0.0.0 --port 8040
-```
-* Link  
-    * http://0.0.0.0:8040/
-    * http://127.0.0.1:8040/docs
-    * http://127.0.0.1:8040/redoc
-* Reference  
-    * https://buildersbox.corp-sansan.com/entry/tech18_container  
-    * https://qiita.com/Brutus/items/3133766e14f11d269933
 
 
 
