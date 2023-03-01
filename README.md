@@ -2,104 +2,55 @@
 Summary of docker environments for tools that data scientists might launch with docker   
 
 ## Contents
-* [Basic docker operations](#basic-docker-operations)
-    * [Basic docker commands](#basic-docker-commands)
-    * [How to run the Dockerfile](#how-to-run-the-dockerfile)
-* [Dockerfiles](#dockerfiles)
+* [Python runtime environment](#python-runtime-environment)
     * [Python3](#python3)
     * [Jupyterlab](#jupyterlab)
+* [WebUI](#webui)
     * [Dash](#dash)
     * [Streamlit](#streamlit)
+* [Machine Learning Development](#machine-learning-development)
     * [MLflow](#mlflow)
     * [Aimflow](#aimflow)
-    * [dbt](#dbt)
+    * [Weight&BIases](#weightbiaseshttpsgithubcomwandbserver)
+* [Pipeline Tools](#pipeline-tools)
     * [Prefect](#prefect)
+* [WebAPI](#webapi)
     * [FastAPI](#fastapi)
+* [Data Transformation](#data-transformation)
+    * [dbt](#dbt)
 * [Inter-Container Cooperation](#others)
     * [Docker network](#docker-network)
     * [Docker outside of docker](#docker-outside-of-docker-dood)
 
 
 
-## Basic docker operations
-### Basic docker commands
-```Dockerfile
-# Enter the container
-docker-compose exec Docker-service-name bash
-
-# Docker image list
-docker images
-
-# Remove docker image
-dokcer rmi Image-name
-
-# Check active containers
-docker ps -a
-
-# Docker network list
-docker network ls
-
-# Details of any docker network
-docker network inspect Network-name
-
-# Container to container http communication
-# container name : Container name for communication destination
-# port : Open ports of the container to which you are communicating
-curl http://[container name]:[port]/
-# example
-curl http://fastapi:8040/
-```
-
-
-### How to run the Dockerfile
-How to start a dockerfile using Docker compose
-```bash
-# Start container
-bash docker.sh up
-
-# Rebuild the docker image and start container
-bash docker.sh force
-
-# Stop container
-bash docker.sh down
-
-# Stop the container and delete the image
-bash docker.sh rm 
-```
-
-
-## Dockerfiles
-Explanation of the use and contents of various dockerfiles
+## Python runtime environment
 
 ### Python3
 <img src="images/python3.png" width="200">
-
-```bash
-docker compose exec python3 bash
-```
 
 ### [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/)
 https://github.com/fuyu-quant/jupyterlab-docker
 
 
 
+
+## WebUI
+
 ### [Dash](https://dash.plotly.com/)
 https://github.com/fuyu-quant/dash-docker
 
 ### [Streamlit](https://docs.streamlit.io/)
-<img src="images/Streamlit.png" width="200">
-
-unimplemented
-* Link  
-* Reference  
+https://github.com/fuyu-quant/streamlit-docker
 
 ### [gradion](https://github.com/gradio-app/gradio)
 <img src="images/gradio.png" width="200">
 
-unimplemented
-* Link  
-* Reference  
 
+
+
+
+## Machine Learning Development
 
 ### [MLflow](https://mlflow.org/docs/latest/index.html)
 <img src="images/MLflow.png" width="200">
@@ -107,26 +58,18 @@ unimplemented
 unimplemented 
 * Link　 
     * http://localhost:15000/#/
-* Reference  
-a
 
 
 ### [Aimflow](https://github.com/aimhubio/aimlflow)
 <img src="images/Aimflow.png" width="200">
 
-unimplemented
-* Link　
-* Reference 
+### [Weight&Biases](https://github.com/wandb/server)
 
 
-### [dbt](https://docs.getdbt.com/docs/collaborate/documentation)
-<img src="images/dbt.png" width="200">
-
-unimplemented
-* Link
-https://github.com/fuyu-quant/dbt-docker
 
 
+
+## Pipeline Tools
 
 
 ### [Prefect](https://docs.prefect.io/getting-started/overview/)
@@ -137,6 +80,10 @@ unimplemented
 * Reference
 
 
+
+
+
+## WebAPI
 
 ### [FastAPI](https://fastapi.tiangolo.com/)
 <img src="images/FastAPI.png" width="200">
@@ -158,10 +105,16 @@ uvicorn main:app --reload  --host 0.0.0.0 --port 8040
 
 
 
+## Data Transformation
+
+### [dbt](https://docs.getdbt.com/docs/collaborate/documentation)
+https://github.com/fuyu-quant/dbt-docker
+
+
+
 
 ### utils
 dockerfile templates, etc.
-
 
 
 
