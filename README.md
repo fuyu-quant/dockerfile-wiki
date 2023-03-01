@@ -79,11 +79,8 @@ docker compose exec python3 bash
 ```
 
 ### [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/)
-<img src="images/Jupyterlab.png" width="200">
+https://github.com/fuyu-quant/jupyterlab-docker
 
-* Link　　
-    * http://localhost:8080/lab
-* Reference  
 
 
 ### [Dash](https://dash.plotly.com/)
