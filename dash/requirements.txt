@@ -1,7 +1,0 @@
-dash==2.3.1
-plotly==5.10.0
-seaborn
-pandas
-numpy
-category_encoders 
-scikit-learn
