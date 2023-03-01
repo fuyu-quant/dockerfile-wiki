@@ -88,16 +88,7 @@ docker compose exec python3 bash
 
 ### [Dash](https://dash.plotly.com/)
 <img src="images/Dash.png" width="200">
-Execution command
-
-```bash
-docker-compose exec dash bash -c "python dash/src/app.py"
-```
-When you want to exit, press [control + c]
-* Link  
-    * http://127.0.0.1:8050/
-* Reference  
-    * https://qiita.com/NobuYoshi/items/9078d0689fef748486ac
+https://github.com/fuyu-quant/dash-docker
 
 ### [Streamlit](https://docs.streamlit.io/)
 <img src="images/Streamlit.png" width="200">
@@ -138,7 +129,7 @@ unimplemented
 unimplemented
 * Link
 https://github.com/fuyu-quant/dbt-docker
-* Reference
+
 
 
 
