@@ -87,7 +87,6 @@ docker compose exec python3 bash
 
 
 ### [Dash](https://dash.plotly.com/)
-<img src="images/Dash.png" width="200">
 https://github.com/fuyu-quant/dash-docker
 
 ### [Streamlit](https://docs.streamlit.io/)
