@@ -1,5 +1,0 @@
-torch
-opencv-python
-einops
-gradio
-numpy
