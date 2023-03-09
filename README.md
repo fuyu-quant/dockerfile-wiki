@@ -34,67 +34,66 @@ Summary of docker environments for tools that data scientists might launch with 
 
 ## Python runtime environment
 
-### Python3
+### [Python3](https://github.com/fuyu-quant/python3-docker)
 <img src="images/python3.png" width="200">
 
-### [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/)
-https://github.com/fuyu-quant/jupyterlab-docker
+### [JupyterLab](https://github.com/fuyu-quant/jupyterlab-docker)
+<img src="images/Jupyterlab.png" width="200">
+
 
 
 
 ## WebUI
 
-### [Dash](https://dash.plotly.com/)
-https://github.com/fuyu-quant/dash-docker
-
-### [Streamlit](https://docs.streamlit.io/)
-https://github.com/fuyu-quant/streamlit-docker
-
-### [gradion](https://github.com/gradio-app/gradio)
+### [Dash](https://github.com/fuyu-quant/dash-docker)
 <img src="images/gradio.png" width="200">
+
+### [Streamlit](https://github.com/fuyu-quant/streamlit-docker)
+<img src="images/Streamlit.png" width="200">
+
+### gradion
+<img src="images/gradio.png" width="200">
+
 
 
 
 ## Machine Learning Development
 
-### [MLflow](https://mlflow.org/docs/latest/index.html)
-https://github.com/fuyu-quant/mlflow-docker
+### [MLflow](https://github.com/fuyu-quant/mlflow-docker)
+<img src="images/MLflow.png" width="200">
 
-### [Aimflow](https://github.com/aimhubio/aimlflow)
-https://github.com/fuyu-quant/aimflow-docker
-
+### [Aimflow](https://github.com/fuyu-quant/aimflow-docker)
+<img src="images/Aimflow.png" width="200">
 
 ### [Weight&Biases](https://github.com/wandb/server)
 
 
 
+
 ## Pipeline Tools
 
-### [Prefect](https://docs.prefect.io/getting-started/overview/)
-https://github.com/fuyu-quant/prefect-docker
-
+### [Prefect](https://github.com/fuyu-quant/prefect-docker)
+<img src="images/Prefect.png" width="200">
 
 
 
 
 ## WebAPI
 
-### [FastAPI](https://fastapi.tiangolo.com/)
-https://github.com/fuyu-quant/fastapi-docker
-
+### [FastAPI](https://github.com/fuyu-quant/fastapi-docker)
+<img src="images/FastAPI.png" width="200">
 
 
 
 
 ## Data Transformation
 
-### [dbt](https://docs.getdbt.com/docs/collaborate/documentation)
-https://github.com/fuyu-quant/dbt-docker
+### [dbt](https://github.com/fuyu-quant/dbt-docker)
+<img src="images/dbt.png" width="200">
 
 
 
-
-### utils
+## utils
 dockerfile templates, etc.
 
 
