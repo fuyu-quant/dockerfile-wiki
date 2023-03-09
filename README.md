@@ -46,7 +46,7 @@ Summary of docker environments for tools that data scientists might launch with 
 ## WebUI
 
 ### [Dash](https://github.com/fuyu-quant/dash-docker)
-<img src="images/gradio.png" width="200">
+<img src="images/Dash.png" width="200">
 
 ### [Streamlit](https://github.com/fuyu-quant/streamlit-docker)
 <img src="images/Streamlit.png" width="200">
