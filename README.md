@@ -66,8 +66,8 @@ Summary of docker environments for tools that data scientists might launch with 
 ### [Aimflow](https://github.com/fuyu-quant/aimflow-docker)
 <img src="images/Aimflow.png" width="200">
 
-### [Weight&Biases](https://github.com/wandb/server)
-
+### [Weights&Biases](https://github.com/fuyu-quant/wandb-docker)
+<img src="images/wandb.png" width="200">
 
 
 
