@@ -9,6 +9,7 @@ Summary of docker environments for tools that data scientists might launch with 
 * [WebUI](#webui)
     * [Dash](#dash)
     * [Streamlit](#streamlit)
+    * [Gradio](#gradionhttpsgithubcomfuyu-quantgradio-docker)
 * [Machine Learning Development](#machine-learning-development)
     * [MLflow](#mlflow)
     * [Aimflow](#aimflow)
