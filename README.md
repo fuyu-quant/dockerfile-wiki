@@ -77,7 +77,7 @@ Summary of Docker environments for various applications
 ## Pipeline Tools
 
 ### [Prefect]()
-<img src="images/Prefect.png" width="200">
+<img src="images/prefect.png" width="200">
 
 
 
