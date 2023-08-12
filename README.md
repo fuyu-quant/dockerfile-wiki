@@ -1,5 +1,5 @@
 # Dockerfile wiki
-[Docker hub](https://hub.docker.com/u/fuyuquant)\\
+[Docker hub](https://hub.docker.com/u/fuyuquant)  
 Summary of Docker environments for various applications 
 
 
