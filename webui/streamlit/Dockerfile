@@ -9,11 +9,13 @@ ENV LANG="ja_JP.UTF-8" \
 ENV TZ JST-9
 
 
-# Installing packages
-COPY ../streamlit ~/streamlit
+COPY . ~/streamlit
 
 # Installing packages
 WORKDIR ~/streamlit
 RUN pip install --no-cache-dir -r requirements.txt
 
-ENTRYPOINT ["streamlit", "run", "~/streamlit/app.py", "--server.port=8060", "--server.address=0.0.0.0"]
+ENTRYPOINT ["streamlit", "run", "app.py", "--server.port=8060", "--server.address=0.0.0.0"]
+
+
+# docker run -p 8060:8060 --name streamlit -d fuyuquant/streamlit

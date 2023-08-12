@@ -1,5 +1,7 @@
-# Dockerfile for data scientists
-Summary of docker environments for tools that data scientists might launch with docker   
+# Dockerfile wiki
+[Docker hub](https://hub.docker.com/u/fuyuquant)\\
+Summary of Docker environments for various applications 
+
 
 ## Contents
 
@@ -94,72 +96,25 @@ Summary of docker environments for tools that data scientists might launch with 
 
 
 
-## utils
-dockerfile templates, etc.
-
 
 
 ## Basic docker operations
 ### Basic docker commands
-```Dockerfile
-# Enter the container
-docker-compose exec Docker-service-name bash
-
-# Docker image list
-docker images
-
-# Remove docker image
-dokcer rmi Image-name
-
-# Check active containers
-docker ps -a
-
-# Docker network list
-docker network ls
-
-# Details of any docker network
-docker network inspect Network-name
-
-# Container to container http communication
-# container name : Container name for communication destination
-# port : Open ports of the container to which you are communicating
-curl http://[container name]:[port]/
-# example
-curl http://fastapi:8040/
-```
-
-
-### How to run the Dockerfile
-How to start a dockerfile using Docker compose
+* docker build
 ```bash
-# Start container
-bash docker.sh up
-
-# Rebuild the docker image and start container
-bash docker.sh force
-
-# Stop container
-bash docker.sh down
-
-# Stop the container and delete the image
-bash docker.sh rm 
+docker build -t fuyuquant/image_name .
 ```
-
-
-
-## Inter-Container Cooperation
-How to make dockers work together
-
-### Docker network
-* Reference  
-    * https://qiita.com/shundayo/items/8b24af5239d9162b253c  
-    * https://qiita.com/dhiki1234/items/9a673107eb9310d6aafa
-
-### Docker outside of docker (dood)
-* Reference  
-    * https://hub.docker.com/layers/library/docker/20.10.7-dind/images/sha256-778521a7c301de26994f7aca616ab10c1bc35b8f66b802345d0cad89af381dcb  
-    * https://qiita.com/t_katsumura/items/d5be6afadd6ec6545a9d  
-    * https://qiita.com/tkosht/items/7a0721fa9cc69eabf531  
+* docker run
+```bash
+docker run --name container_name -d fuyuquant/image_name
+```
+* docker push
+```bash
+docker push fuyuquant/image_name
+```
 
 ## Reference
 * [Docker best practice](https://docs.docker.jp/develop/develop-images/dockerfile_best-practices.html)
+
+
+
