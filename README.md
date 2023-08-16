@@ -108,19 +108,38 @@ Summary of Docker environments for various applications
 
 
 ## Basic docker operations
-### Basic docker commands
-* docker build
+
+### Launch container
+* Execute the acquired image
 ```bash
-docker build -t fuyuquant/image_name .
+docker pull ghcr.io/fuyu-quant/webui/streamlit:latest
+
+docker run --name container_name -d ghcr.io/fuyu-quant/webui/streamlit:latest
 ```
-* docker run
+
+* Execute your own dockerfile
 ```bash
-docker run --name container_name -d fuyuquant/image_name
+docker build -t fuyu-quant/image_name .
+
+docker run --name container_name -d fuyu-quant/image_name
 ```
-* docker push
+
+### Register image
+* Docker Hub
 ```bash
+docker build -t fuyu-quant/image_name .
+
 docker push fuyuquant/image_name
 ```
+
+* GitHub Container Registry
+```bash
+# It needs to be tag as follows
+docker build -t ghcr.io/fuyu-quant/webui/gradio:latest .
+
+docker push ghcr.io/fuyu-quant/webui/streamlit:latest
+```
+
 
 ## Reference
 * [Docker best practice](https://docs.docker.jp/develop/develop-images/dockerfile_best-practices.html)
