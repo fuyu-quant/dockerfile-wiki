@@ -1,5 +1,4 @@
 # Dockerfile wiki
-[Docker hub](https://hub.docker.com/u/fuyuquant)  
 Summary of Docker environments for various applications 
 
 
@@ -37,63 +36,69 @@ Summary of Docker environments for various applications
 
 ## Python runtime environment
 
-### [Python3]()
-<img src="images/python3.png" width="200">
+### Python3
+<img src="images/python3.png" width="100">
 
-### [JupyterLab]()
-<img src="images/Jupyterlab.png" width="200">
+### JupyterLab
+<img src="images/Jupyterlab.png" width="100">
 
-### [GPU]()
-<img src="images/Jupyterlab.png" width="200">
+### GPU
 
 
 ## WebUI
 
-### [Dash](https://github.com/fuyu-quant/dockerfile-wiki/tree/develop/webui/dash)
-<img src="images/Dash.png" width="200">
+### Dash
+<img src="images/Dash.png" width="100">
+* [code](https://github.com/fuyu-quant/dockerfile-wiki/tree/develop/webui/dash)
+* [image](https://github.com/fuyu-quant/dockerfile-wiki/pkgs/container/webui%2Fdash)
 
-### [Streamlit](https://github.com/fuyu-quant/dockerfile-wiki/tree/develop/webui/streamlit)
-<img src="images/Streamlit.png" width="200">
 
-### [gradion](https://github.com/fuyu-quant/dockerfile-wiki/tree/develop/webui/gradio)
-<img src="images/gradio.png" width="200">
+### Streamlit
+<img src="images/Streamlit.png" width="100">
+* [code](https://github.com/fuyu-quant/dockerfile-wiki/tree/develop/webui/streamlit)
+* [image](https://github.com/fuyu-quant/dockerfile-wiki/pkgs/container/webui%2Fstreamlit)
 
+
+### gradio
+<img src="images/gradio.png" width="100">
+* [code](https://github.com/fuyu-quant/dockerfile-wiki/tree/develop/webui/gradio)
+* [image](https://github.com/fuyu-quant/dockerfile-wiki/pkgs/container/webui%2Fgradio)
 
 
 
 ## Machine Learning Development
 
-### [MLflow]()
-<img src="images/MLflow.png" width="200">
+### MLflow
+<img src="images/MLflow.png" width="100">
 
-### [Aimflow]()
-<img src="images/Aimflow.png" width="200">
+### Aimflow
+<img src="images/Aimflow.png" width="100">
 
-### [Weights&Biases]()
-<img src="images/wandb.png" width="200">
+### Weights&Biases
+<img src="images/wandb.png" width="100">
 
 
 
 ## Pipeline Tools
 
-### [Prefect]()
-<img src="images/prefect.png" width="200">
+### Prefect
+<img src="images/prefect.png" width="100">
 
 
 
 
 ## WebAPI
 
-### [FastAPI]()
-<img src="images/FastAPI.png" width="200">
+### FastAPI
+<img src="images/FastAPI.png" width="100">
 
 
 
 
 ## Data Transformation
 
-### [dbt]()
-<img src="images/dbt.png" width="200">
+### dbt
+<img src="images/dbt.png" width="100">
 
 
 
